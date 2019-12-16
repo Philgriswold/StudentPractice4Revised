@@ -25,12 +25,12 @@
 --ExerciseName VARCHAR (55) NOT NULL,
 --ProgrammingLanguage VARCHAR (55) NOT NULL);
 
-CREATE TABLE StudentExercise (
-Id INTEGER NOT NULL PRIMARY KEY IDENTITY,
-StudentId INTEGER NOT NULL, 
-ExerciseId INTEGER NOT NULL,
-CONSTRAINT FK_StudentExercise_StudentId FOREIGN KEY (StudentId) REFERENCES Student(Id),
-CONSTRAINT FK_StudentExercise_ExerciseId FOREIGN KEY (ExerciseId) REFERENCES Exercise(Id));
+--CREATE TABLE StudentExercise (
+--Id INTEGER NOT NULL PRIMARY KEY IDENTITY,
+--StudentId INTEGER NOT NULL, 
+--ExerciseId INTEGER NOT NULL,
+--CONSTRAINT FK_StudentExercise_StudentId FOREIGN KEY (StudentId) REFERENCES Student(Id),
+--CONSTRAINT FK_StudentExercise_ExerciseId FOREIGN KEY (ExerciseId) REFERENCES Exercise(Id));
 
 
 ---- Students
@@ -55,12 +55,12 @@ CONSTRAINT FK_StudentExercise_ExerciseId FOREIGN KEY (ExerciseId) REFERENCES Exe
 
 ---- Instructors
 
-INSERT INTO Instructor (FirstName, LastName, SlackHandle, Specialty, CohortId) VALUES ('Adam', 'Sheaffer', 'Adam Sheaffer', 'Back End', 35);
-INSERT INTO Instructor (FirstName, LastName, SlackHandle, Specialty, CohortId) VALUES ('Brenda', 'Long', 'Brenda Long', 'Front End', 33);
-INSERT INTO Instructor (FirstName, LastName, SlackHandle, Specialty, CohortId) VALUES ('Madi', 'Pepper', 'Madi Pepper', 'JIing', 34);
-INSERT INTO Instructor (FirstName, LastName, SlackHandle, Specialty, CohortId) VALUES ('Mo', 'Silvera', 'Mo Silvera', 'Communicating', 37);
-INSERT INTO Instructor (FirstName, LastName, SlackHandle, Specialty, CohortId) VALUES ('Jisie', 'David', 'Jisie David', 'Python', 36);
-INSERT INTO Instructor (FirstName, LastName, SlackHandle, Specialty, CohortId) VALUES ('Rose', 'Wisotsky', 'Rose Wisotsky', 'Being Funny', 36);
+INSERT INTO Instructor (FirstName, LastName, SlackHandle, Specialty, CohortId) VALUES ('Adam', 'Sheaffer', 'Adam Sheaffer', 'Back End', 1);
+INSERT INTO Instructor (FirstName, LastName, SlackHandle, Specialty, CohortId) VALUES ('Brenda', 'Long', 'Brenda Long', 'Front End', 2);
+INSERT INTO Instructor (FirstName, LastName, SlackHandle, Specialty, CohortId) VALUES ('Madi', 'Pepper', 'Madi Pepper', 'JIing', 3);
+INSERT INTO Instructor (FirstName, LastName, SlackHandle, Specialty, CohortId) VALUES ('Mo', 'Silvera', 'Mo Silvera', 'Communicating', 4);
+INSERT INTO Instructor (FirstName, LastName, SlackHandle, Specialty, CohortId) VALUES ('Jisie', 'David', 'Jisie David', 'Python', 5);
+INSERT INTO Instructor (FirstName, LastName, SlackHandle, Specialty, CohortId) VALUES ('Rose', 'Wisotsky', 'Rose Wisotsky', 'Being Funny', 6);
 
 ---- Exercises
 
@@ -73,14 +73,14 @@ INSERT INTO Exercise (ExerciseName, ProgrammingLanguage) VALUES ('Trestlebridge'
 
 ---- Assign Exercises
 
-INSERT INTO StudentExercises (StudentId, ExerciseId) VALUES (1, 2);
-INSERT INTO StudentExercises (StudentId, ExerciseId) VALUES (2, 3);
-INSERT INTO StudentExercises (StudentId, ExerciseId) VALUES (3, 1);
-INSERT INTO StudentExercises (StudentId, ExerciseId) VALUES (4, 4);
-INSERT INTO StudentExercises (StudentId, ExerciseId) VALUES (5, 1);
-INSERT INTO StudentExercises (StudentId, ExerciseId) VALUES (6, 5);
-INSERT INTO StudentExercises (StudentId, ExerciseId) VALUES (7, 6);
-INSERT INTO StudentExercises (StudentId, ExerciseId) VALUES (8, 2);
+INSERT INTO StudentExercise (StudentId, ExerciseId) VALUES (9, 2);
+INSERT INTO StudentExercise (StudentId, ExerciseId) VALUES (10, 3);
+INSERT INTO StudentExercise (StudentId, ExerciseId) VALUES (11, 1);
+INSERT INTO StudentExercise (StudentId, ExerciseId) VALUES (12, 4);
+INSERT INTO StudentExercise (StudentId, ExerciseId) VALUES (13, 1);
+INSERT INTO StudentExercise (StudentId, ExerciseId) VALUES (14, 5);
+INSERT INTO StudentExercise (StudentId, ExerciseId) VALUES (15, 6);
+INSERT INTO StudentExercise (StudentId, ExerciseId) VALUES (16, 2);
 
 --write a query to return all student first and last names with cohort name
 
